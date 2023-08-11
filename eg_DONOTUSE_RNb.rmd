@@ -1,0 +1,30 @@
+---
+title: "Test notebook"
+output: html_document
+---
+
+# Test
+
+Import a library
+
+```{r}
+library(tidyverse)
+```
+
+Create fake data
+
+```{r}
+df <- tibble(x = rnorm(100), y = rnorm(100))
+df
+```
+
+Plot data
+
+```{r}
+df %>%
+    ggplot(aes(x, y)) +
+    geom_point() +
+    theme_bw()
+```
+
+**Recommendation: Keep all notebooks in one platform using Jupyter**
