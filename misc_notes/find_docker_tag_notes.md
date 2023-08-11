@@ -1,4 +1,5 @@
-/Users/zeynepenkavi % docker images
+```
+Users/zeynepenkavi % docker images
 REPOSITORY       TAG       IMAGE ID       CREATED         SIZE
 rocker/rstudio   4.3.0     f327464013aa   5 hours ago     1.89GB
 amazon/aws-cli   latest    a7140351dd68   2 days ago      377MB
@@ -38,3 +39,4 @@ amazon/aws-cli   <none>    533220ba68fd   21 months ago   326MB
       }
    ]
 }
+```
