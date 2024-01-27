@@ -12,6 +12,8 @@ aws ec2 describe-key-pairs
 
 ## Create cluster config using `make_test_cluster_config.sh`
 
+Note: The AMI name `alinux2` reached its end of life but suppoer for AmazonLinux 2023 has not been implemented yet https://github.com/aws/aws-parallelcluster/issues/5214
+
 ```
 sh make_test_cluster_config.sh
 ```
@@ -30,4 +32,11 @@ pcluster list-clusters
 export KEYS_PATH=/Users/zenkavi/aws_keys
 
 pcluster ssh --cluster-name test-cluster -i $KEYS_PATH/test-cluster.pem
+```
+
+## Delete cluster
+
+```
+pcluster delete-cluster --cluster-name test-cluster
+pcluster list-clusters
 ```
