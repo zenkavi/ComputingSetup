@@ -5,33 +5,25 @@ export PROMPT='%B%F{magenta}%/%f%b %# '
 
 alias ls='ls -aGFh'
 
-# alias aws='docker run --rm -it -v ~/.aws:/root/.aws amazon/aws-cli:2.11.26'
+# Homebrew initialization
+eval "$(/opt/homebrew/bin/brew shellenv)"
 
-# Homebrew and pyenv instructions
-# export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"
-# export PATH="/usr/local/opt/sqlite/bin:$PATH"
-# export PATH="/usr/local/opt/llvm/bin:$PATH"
-
-# export PKG_CONFIG_PATH="/usr/local/opt/readline/lib/pkgconfig"
-# export PKG_CONFIG_PATH="/usr/local/opt/sqlite/lib/pkgconfig:$PKG_CONFIG_PATH"
-# export PKG_CONFIG_PATH="/usr/local/opt/zlib/lib/pkgconfig:$PKG_CONFIG_PATH"
-# export PKG_CONFIG_PATH="/usr/local/opt/libffi/lib/pkgconfig:$PKG_CONFIG_PATH"
-
-# export LDFLAGS="-L/usr/local/opt/openssl@1.1/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/sqlite/lib -L/usr/local/opt/zlib/lib -L/usr/local/opt/libffi/lib -L/usr/local/opt/llvm/lib -Wl,-rpath,/usr/local/opt/llvm/li"
-# export CPPFLAGS="-I/usr/local/opt/openssl@1.1/include -I/usr/local/opt/readline/include -I/usr/local/opt/sqlite/include -I/usr/local/opt/zlib/include -I/usr/local/opt/libffi/include -I/usr/local/opt/llvm/include"
-
-eval "$(pyenv init --path)"
+# Pyenv initialization
+export PYENV_ROOT="$HOME/.pyenv"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 
-# Go dependency path for Hugo for website management
-export PATH=$PATH:/usr/local/go/bin
+# Python build dependencies recommended by pyenv
+# Uncomment when you want to run pyenv install {version}
+# Then source via `exec "$SHELL"`
+# Flags for readline
+export LDFLAGS="-L/opt/homebrew/opt/readline/lib -L/opt/homebrew/opt/sqlite/lib -L/opt/homebrew/opt/zlib/lib"
+export CPPFLAGS="-I/opt/homebrew/opt/readline/include -I/opt/homebrew/opt/sqlite/include -I/opt/homebrew/opt/zlib/include"
 
-# Add Visual Studio Code (code)
-# export PATH="\$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
+# PATH and flags for sqlite
+export PATH="/opt/homebrew/opt/sqlite/bin:$PATH"
 
-# Set path for Stan.jl
-export CMDSTAN_HOME=/Users/zeynepenkavi/.cmdstanr/cmdstan-2.26.0
 
 # Git helpers
 alias gitdefault='git rev-parse --abbrev-ref origin/HEAD | sed "s/origin\///"'

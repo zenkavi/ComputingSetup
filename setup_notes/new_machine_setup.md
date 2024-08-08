@@ -1,0 +1,32 @@
+
+## New laptop setup
+
+- [x] Login to iCloud
+- [x] Download Documents from iCloud
+    - [x] System Settings > iCloud > Desktop & Documents Folders
+- [x] Setup Terminal
+    - [x] Select Pro for new window profile and under profiles
+    - [x] Add startup script
+- [x] Homebrew
+    - [x] Command line tools comes with home-brew
+    - [x] Make sure to add eval "$(/opt/homebrew/bin/brew shellenv)" to .zshrc
+- [x] Docker Desktop
+- [x] Configure git
+    - [x] Add global gitignore
+    - [x] Run git config https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup
+- [x] pyenv
+- [x] Slack
+- [x] VSCode
+- [x] Set up VPN
+- [x] Set up stats software 
+    - [x] R - homebrew
+    - [x] Python - pyenv
+    - [x] Julia - homebrew
+    - [x] JupyterLab - homebrew
+    - [x] Add R kernel to Jupyter
+        - [x] install.packages('IRkernel') - on admin
+        - [x] IRkernel::installspec() - on user
+    - [x] Add Julia kernel to Jupyter
+        - [x] `]add IJulia`- on admin
+        - [x] `]build IJulia` - on user
+    - [x] Test kernels in IntroToVSCode repo
