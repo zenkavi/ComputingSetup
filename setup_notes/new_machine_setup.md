@@ -30,3 +30,6 @@
         - [x] `]add IJulia`- on admin
         - [x] `]build IJulia` - on user
     - [x] Test kernels in IntroToVSCode repo
+- [x] Set up ssh keys for Github
+    - https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
+    - https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account
