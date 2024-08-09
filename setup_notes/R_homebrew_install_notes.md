@@ -1,3 +1,16 @@
+## R 4.4.1
+
+Installed R 4.4.1 regularly through Homebrew (no cask). Ran into issue installing `tidyverse`.
+
+Resolved it with
+
+```
+brew install harfbuzz
+brew install fribidi
+brew install libtiff
+```
+
+## Pre R 4.4.1
 
 To install a specific version of a package from homebrew is not always straighforward. This post was particularly helpful.
 
