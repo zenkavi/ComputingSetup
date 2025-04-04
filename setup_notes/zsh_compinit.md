@@ -256,6 +256,12 @@ For those unfamiliar with Unix permissions, here's what the numbers mean:
 - Others can read and execute (5 = 4+0+1)  
  This is considered secure because only the owner can modify the files.  
 
+### To check permissions in octal notation in mac
+
+```
+stat -f "%A %N" /opt/homebrew/share/zsh
+```
+
 ## Conclusion
 Dealing with ZSH's "insecure files" warning can be frustrating, but with this comprehensive guide, you should be able to identify and fix any occurrence of this issue. The most effective approach is usually Solution 5, which addresses files, directories, and ownership in one go.
 
